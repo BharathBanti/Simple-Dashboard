@@ -7,7 +7,7 @@ This project focuses on clean UI design, responsive layouts, interactive compone
 
 ## 🚀 Live Demo
 🔗 **GitHub Pages:**  
-`https://<your-username>.github.io/codewithbanti-dashboard/`
+`https://bharathbanti.github.io/Simple-Dashboard/`
 
 ---
 
