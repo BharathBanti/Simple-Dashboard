@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Site info -->
+    <title>CodeWithBanti Dashboard</title>
+    <meta name="description" content="CodeWithBanti Dashboard - A modern responsive admin dashboard built using HTML, CSS and JavaScript.">
+    <meta name="author" content="Bharath Dasari">
+
+    <!-- Fav icon -->
+    <link rel="icon" href="./Media/profile.png">
+
+    <!-- SEO -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="CodeWithBanti Dashboard">
+    <meta property="og:description" content="A professional admin dashboard built using HTML, CSS & JS.">
+    <!-- <meta property="og:image" content="https://codewithbanti.com/preview.png">
+    <meta property="og:url" content="https://codewithbanti.com/"> -->
+    <meta property="og:type" content="website">
+
+    <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="dashboard">
+
+        <!-- Mobile Overlay -->
+        <div class="mobile-overlay" id="mobileOverlay"></div>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <button type="button" aria-label="button" class="mobile-toggle" id="menuToggle"><i
+                        class="fa-solid fa-bars"></i></button>
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+            </div>
+
+            <div class="header-right">
+                <button type="button" aria-label="button" class="theme-toggle" id="themeToggle">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <div class="notification">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">4</span>
+                </div>
+                <div class="user-profile">
+                    <img src="./Media/profile.png" alt="profile image">
+                </div>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <h1>CodeWithBanti</h1>
+            </div>
+            <div class="nav-title">
+                Main Menu
+            </div>
+            <div class="nav-links">
+                <a title="nav-link" href="#" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a title="nav-link" href="#" class="nav-item ">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Projects</span>
+                </a>
+                <a title="nav-link" href="#" class="nav-item ">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Calendar</span>
+                </a>
+                <a title="nav-link" href="#" class="nav-item ">
+                    <i class="fas fa-users"></i>
+                    <span>Team Members</span>
+                </a>
+                <a title="nav-link" href="#" class="nav-item ">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </div>
+            <div class="nav-title">Team Memebers</div>
+            <div class="nav-links">
+                <div class="team-member">
+                    <img class="member-avatar" src="./Media/profile.png" alt="team member">
+                    <span>Bharath Dasari</span>
+                </div>
+                <div class="team-member">
+                    <img class="member-avatar" src="./Media/member2.jpg" alt="team member">
+                    <span>David Smith</span>
+                </div>
+                <div class="team-member">
+                    <img class="member-avatar" src="./Media/member4.webp" alt="team member">
+                    <span>Reena Weldwes</span>
+                </div>
+                <div class="team-member">
+                    <img class="member-avatar" src="./Media/member5.webp" alt="team member">
+                    <span>Travansi Alice</span>
+                </div>
+                <div class="team-member">
+                    <img class="member-avatar" src="./Media/member3.jpg" alt="team member">
+                    <span>James William</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Welcome Banner -->
+            <div class="welcome-banner">
+                <h1>Welcome back, Banti</h1>
+                <p>You have 3 ongoing projects, 2 deadlines are approaching this week.</p>
+                <button type="button" aria-label="button" class="btn btn-light">Create New Project</button>
+            </div>
+            <!-- Profile Cards -->
+            <div class="profile-card card">
+                <img class="profile-image" src="./Media/profile.png" alt="profile image">
+                <div class="profile-info">
+                    <h2>Bharath Dasari</h2>
+                    <p>Project Manager</p>
+                    <div class="progress-ring">
+                        <svg class="progress-circle" width="100" height="100" viewBox="0 0 100 100">
+                            <circle class="progress-bg" cx="50" cy="50" r="45" />
+                            <circle class="progress-fill" cx="50" cy="50" r="45" />
+                        </svg>
+                        <div class="progress-text">
+                            <span>75%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">12</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">24</span>
+                        <span class="stat-label">Tasks</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">89%</span>
+                        <span class="stat-label">Success</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Projects Section -->
+            <section class="projects-section">
+                <div class="section-title">
+                    <h2>Ongoing Projects</h2>
+                    <a href="#" class="view-all">View All <i class="fa fa-arrow-right"></i></a>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="card project-card project-1">
+                        <div class="project-header">
+                            <div class="project-title">
+                                <h3><span class="priority-indicator priority-high"></span>Website Redesign</h3>
+                                <span class="project-category design">Design</span>
+                            </div>
+                            <div class="project-time">
+                                <i class="fas fa-clock"></i>3 Weeks
+                            </div>
+                        </div>
+                        <div class="project-progress">
+                            <div class="progress-info">
+                                <span>Project Progress</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <div class="team-avatars">
+                                <img class="member-avatar" src="./Media/profile.png" alt="team member">
+                                <img class="member-avatar" src="./Media/member3.jpg" alt="team member">
+                                <img class="member-avatar" src="./Media/member5.webp" alt="team member">
+                                <img class="member-avatar" src="./Media/member4.webp" alt="team member">
+                                <img class="member-avatar" src="./Media/member2.jpg" alt="team member">
+                            </div>
+                            <div class="days-left">
+                                <i class="fas fa-calendar"></i>12 days left
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="card project-card project-2">
+                        <div class="project-header">
+                            <div class="project-title">
+                                <h3><span class="priority-indicator priority-medium"></span>Mobile Application
+                                    Development</h3>
+                                <span class="project-category development">Development</span>
+                            </div>
+                            <div class="project-time">
+                                <i class="fas fa-clock"></i>8 Weeks
+                            </div>
+                        </div>
+                        <div class="project-progress">
+                            <div class="progress-info">
+                                <span>Project Progress</span>
+                                <span>45%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <div class="team-avatars">
+                                <img class="member-avatar" src="./Media/member2.jpg" alt="team member">
+                                <img class="member-avatar" src="./Media/member5.webp" alt="team member">
+                                <img class="member-avatar" src="./Media/profile.png" alt="team member">
+                                <img class="member-avatar" src="./Media/member1.jpeg" alt="team member">
+                            </div>
+                            <div class="days-left">
+                                <i class="fas fa-calendar"></i>24 days left
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="card project-card project-3">
+                        <div class="project-header">
+                            <div class="project-title">
+                                <h3><span class="priority-indicator priority-low"></span>Marketing compaign</h3>
+                                <span class="project-category marketing">Marketing</span>
+                            </div>
+                            <div class="project-time">
+                                <i class="fas fa-clock"></i>6 Weeks
+                            </div>
+                        </div>
+                        <div class="project-progress">
+                            <div class="progress-info">
+                                <span>Project Progress</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <div class="team-avatars">
+                                <img class="member-avatar" src="./Media/member4.webp" alt="team member">
+                                <img class="member-avatar" src="./Media/member1.jpeg" alt="team member">
+                                <img class="member-avatar" src="./Media/member2.jpg" alt="team member">
+                                <img class="member-avatar" src="./Media/member5.webp" alt="team member">
+                                <img class="member-avatar" src="./Media/member3.jpg" alt="team member">
+                            </div>
+                            <div class="days-left">
+                                <i class="fas fa-calendar"></i>18 days left
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Projects Stats -->
+            <section class="stats-section">
+                <div class="section-title">
+                    <h2>Project Statistics</h2>
+                </div>
+                <div class="stats-grid">
+                    <!-- Stats Card 1 -->
+                    <div class="card stats-card">
+                        <div class="stat-icon design">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="stat-value">12</div>
+                        <div class="stat-label">Total Projects</div>
+                    </div>
+                    <!-- Stats Card 2 -->
+                    <div class="card stats-card">
+                        <div class="stat-icon development">
+                            <i class="fas fa-spinner"></i>
+                        </div>
+                        <div class="stat-value">5</div>
+                        <div class="stat-label">In Progress</div>
+                    </div>
+                    <!-- Stats Card 3 -->
+                    <div class="card stats-card">
+                        <div class="stat-icon marketing">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-value">7</div>
+                        <div class="stat-label">Completed</div>
+                    </div>
+                </div>
+            </section>
+            <!-- Timeline Section -->
+            <section class="card timeline-section">
+                <div class="section-title">
+                    <h2>Task Distribution Timeline</h2>
+                    <a href="#" class="view-all">View All<i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="timeline-container">
+                    <div class="users-column">
+                        <div class="user-row">
+                            <div class="user-name">Bharath Dasari</div>
+                        </div>
+                        <div class="user-row">
+                            <div class="user-name">David Smith</div>
+                        </div>
+                        <div class="user-row">
+                            <div class="user-name">Reena Weldwes</div>
+                        </div>
+                        <div class="user-row">
+                            <div class="user-name">Travansi Alice</div>
+                        </div>
+                        <div class="user-row">
+                            <div class="user-name">James William</div>
+                        </div>
+                    </div>
+                    <div class="timeline-area">
+                        <div class="timeline-grid">
+                            <!-- Grid lines -->
+                            <div class="grid-line" style="top: 0px;"></div>
+                            <div class="grid-line" style="top: 60px;"></div>
+                            <div class="grid-line" style="top: 120px;"></div>
+                            <div class="grid-line" style="top: 180px;"></div>
+                            <div class="grid-line" style="top: 240px;"></div>
+                        </div>
+                        <!-- Time Markers -->
+                        <div class="time-marker" style="left: 0px;">Mon</div>
+                        <div class="time-marker" style="left: 200px;">Tue</div>
+                        <div class="time-marker" style="left: 400px;">Wed</div>
+                        <div class="time-marker" style="left: 600px;">Thu</div>
+                        <div class="time-marker" style="left: 800px;">Fri</div>
+                        <!-- Task Bars -->
+                        <div class="task-bar mon-taskbar-1">
+                            Design Review
+                        </div>
+                        <div class="task-bar mon-taskbar-2">
+                            Client Meeting
+                        </div>
+                        <div class="task-bar tue-taskbar-1">
+                            API Integration
+                        </div>
+                        <div class="task-bar tue-taskbar-2">
+                            Frontend Development
+                        </div>
+                        <div class="task-bar wed-taskbar-1">
+                            Content Creation
+                        </div>
+                        <div class="task-bar thu-taskbar-1">
+                            Bug Fixing
+                        </div>
+                        <div class="task-bar thu-taskbar-2">
+                            Testing
+                        </div>
+                        <div class="task-bar fri-taskbar-1">
+                            Deployment
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Users Section -->
+            <section class="users-section">
+                <div class="section-title">
+                    <h2>Team Members</h2>
+                    <a href="#" class="view-all">View All<i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="users-grid">
+                    <!-- User 1 -->
+                    <div class="card user-card">
+                        <div class="user-avatar-lg">
+                            <img src="./Media/member5.webp" alt="profile">
+                        </div>
+                        <div class="user-info">
+                            <h3>Travansi Alice</h3>
+                            <p>Frontend Developer</p>
+                        </div>
+                    </div>
+                    <!-- User 2 -->
+                    <div class="card user-card">
+                        <div class="user-avatar-lg">
+                            <img src="./Media/member1.jpeg" alt="profile">
+                        </div>
+                        <div class="user-info">
+                            <h3>David Smith</h3>
+                            <p>Backend Developer</p>
+                        </div>
+                    </div>
+                    <!-- User 3 -->
+                    <div class="card user-card">
+                        <div class="user-avatar-lg">
+                            <img src="./Media/member2.jpg" alt="profile">
+                        </div>
+                        <div class="user-info">
+                            <h3>Prabhas Raju</h3>
+                            <p>Human Resources Department</p>
+                        </div>
+                    </div>
+                    <!-- User 3 -->
+                    <div class="card user-card">
+                        <div class="user-avatar-lg">
+                            <img src="./Media/member3.jpg" alt="profile">
+                        </div>
+                        <div class="user-info">
+                            <h3>James William</h3>
+                            <p>Marketing Manager</p>
+                        </div>
+                    </div>
+                    <!-- User 4 -->
+                    <div class="card user-card">
+                        <div class="user-avatar-lg">
+                            <img src="./Media/member4.webp" alt="profile">
+                        </div>
+                        <div class="user-info">
+                            <h3>Reena Weldwes</h3>
+                            <p>Client Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Copyright &copy; 2025 Chatrapathi Sivaji Maharaj. All rights reserved.</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
