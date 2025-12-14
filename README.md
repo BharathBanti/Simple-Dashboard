@@ -7,7 +7,7 @@ This project focuses on clean UI design, responsive layouts, interactive compone
 
 ## 🚀 Live Demo
 🔗 **GitHub Pages:**  
-`https://bharathbanti.github.io/Simple-Dashboard/`
+https://bharathbanti.github.io/Simple-Dashboard/
 
 ---
 
